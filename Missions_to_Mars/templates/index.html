@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hot Finds</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    h3 {
+      font-size: 15px;}
+    .featured {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      height: 450px;
+      width: 650px;
+
+    }
+    .card_img{
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      height: 350px;
+      width: 350px;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Mars Data -->
+    <div class="row" id="mars_news">
+      <div class="col-md-12">
+        <h2>Mars Latest News</h2>
+        <p><h3>{{mars.title}}</h3><br/>
+        {{mars.article}}</p>
+      </div>
+    </div>
+    <br/>
+   
+    <div class="row" id="mars_news">
+      <div class="col-md-7">
+        <h2>Featured Mars Image</h2>
+        <img src="{{mars.featured_image_link}}" class="featured">
+      </div>
+      <div class="col-md-4">
+        <h2>Mars Facts</h2>
+        <table border="1" class="dataframe">  
+          <thead>    
+            <tr style="text-align:right;">
+              <th></th>
+              <th>Mars</th>
+            </tr>    
+            <tr>       
+              <th>Description</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>       
+              <th>Equatorial Diameter:</th>
+              <td>6,792 km</td>
+            </tr>
+            <tr>       
+              <th>Polar Diameter:</th>
+              <td>6,752 km</td>
+            </tr>  
+            <tr>       
+              <th>Mass:</th>
+              <td>6.39 × 10^23 kg (0.11 Earths)</td>
+              </tr>     
+            <tr>
+              <th>Moons:</th>  
+              <td>2 (Phobos &amp; Deimos)</td>  
+            </tr>     
+            <tr>     
+              <th>Orbit Distance:</th>
+              <td>227,943,824 km (1.38 AU)</td>     
+            </tr>    
+              <tr>    
+              <th>Orbit Period:</th>    
+              <td>687 days (1.9 years)</td> 
+            </tr>    
+            <tr>      
+              <th>Surface Temperature:</th>  
+              <td>-87 to -5 °C</td>  
+              </tr>  
+            <tr>     
+              <th>First Record:</th>   
+              <td>2nd millennium BC</td> 
+            </tr>  
+            <tr>     
+              <th>Recorded By:</th>       
+              <td>Egyptian astronomers</td>  
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <br/>
+    <h2>Mars Hemisphere</h2>
+    <hr/>
+    <div class="row" id="mars_news">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="{{mars.cerberus_img}}" class="card_img">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.cerberus_title}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="{{mars.schia_img}}" class="card_img">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.schia_title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="row" id="mars_news">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="{{mars.syr_img}}" class="card_img">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.syr_title}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="{{mars.valles_img}}" class="card_img">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.valles_title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
+
